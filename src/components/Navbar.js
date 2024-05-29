@@ -19,6 +19,7 @@ const Nav = () => {
             <button type="button" className="nav-toggle">
               <FaBars/>
             </button>
+            <ul className="nav-links"></ul>
           </div>
       </div>
     </NavContainer>

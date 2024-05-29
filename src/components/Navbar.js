@@ -16,6 +16,7 @@ const Nav = () => {
             <Link to="/" >
               <img src={logo} alt="comfy sloth" />
             </Link>
+            <button type="button" className="btn"></button>
           </div>
       </div>
     </NavContainer>

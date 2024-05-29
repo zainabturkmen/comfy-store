@@ -16,7 +16,9 @@ const Nav = () => {
             <Link to="/" >
               <img src={logo} alt="comfy sloth" />
             </Link>
-            <button type="button" className="btn"></button>
+            <button type="button" className="nav-toggle">
+              <FaBars/>
+            </button>
           </div>
       </div>
     </NavContainer>

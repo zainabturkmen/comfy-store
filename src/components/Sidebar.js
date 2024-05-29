@@ -9,7 +9,9 @@ import CartButtons from './CartButtons'
 import { useUserContext } from '../context/user_context'
 
 const Sidebar = () => {
-  return <h4>sidebar</h4>
+  return <SidebarContainer>
+    
+  </SidebarContainer>
 }
 
 const SidebarContainer = styled.div`

@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 const Footer = () => {
-  return <Wrapper></Wrapper>
+  return <Wrapper>
+    <h5>
+      & copy;
+    </h5>
+  </Wrapper>
 }
 
 const Wrapper = styled.footer`

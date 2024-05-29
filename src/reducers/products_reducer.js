@@ -13,6 +13,9 @@ const products_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
     return { ...state, isSideBarOpen: true};
   }
+  if (action.type === SIDEBAR_OPEN) {
+    return { ...state, isSideBarOpen: true};
+  }
   return state;
   throw new Error(`No Matching "${action.type}" - action type`);
 };

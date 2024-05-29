@@ -13,7 +13,7 @@ const Nav = () => {
     <NavContainer>
       <div className="nav-center">
           <div className="nav-header">
-            <Link tp="/" >
+            <Link to="/" >
               <img src={logo} alt="comfy sloth" />
             </Link>
           </div>

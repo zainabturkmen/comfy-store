@@ -12,22 +12,24 @@ const Nav = () => {
   return (
     <NavContainer>
       <div className="nav-center">
-          <div className="nav-header">
-            <Link to="/" >
-              <img src={logo} alt="comfy sloth" />
-            </Link>
-            <button type="button" className="nav-toggle">
-              <FaBars/>
-            </button>
-            <ul className="nav-links">
-              {links.map((link) => {
-                const {id, text, url} = link;
-                return <li key={id}>
+        <div className="nav-header">
+          <Link to="/">
+            <img src={logo} alt="comfy sloth" />
+          </Link>
+          <button type="button" className="nav-toggle">
+            <FaBars />
+          </button>
+          <ul className="nav-links">
+            {links.map((link) => {
+              const { id, text, url } = link;
+              return (
+                <li key={id}>
                   <Link to={url}>{text}</Link>
                 </li>
-              })}
-            </ul>
-          </div>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </NavContainer>
   );

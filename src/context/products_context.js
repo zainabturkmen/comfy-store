@@ -15,7 +15,7 @@ import {
 import { type } from "@testing-library/user-event/dist/type";
 
 const initialState = {
-  isSideBarOpen: false
+  isSideBarOpen: false,
 };
 
 const ProductsContext = React.createContext();
@@ -23,11 +23,13 @@ const ProductsContext = React.createContext();
 export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const openSidebar = ()=> {
+  const openSidebar = () => {
     dispatch({ type: "SIDEBAR_OPEN" });
-  }
+  };
 
-
+  useEffect(() => {
+    openSidebar();
+  }, []);
 
   return (
     <ProductsContext.Provider value="products context">

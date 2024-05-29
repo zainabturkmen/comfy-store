@@ -5,13 +5,14 @@ import { Navbar, Sidebar, Footer } from "./components";
 import {
   Home,
   Products,
-  singleProduct,
+  SingleProduct,
   Cart,
   Checkout,
   Error,
   About,
   PrivateRoute,
 } from "./pages";
+import SingleProductPage from "./pages/SingleProductPage";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route exact path="/products">
           <Products />
         </Route>
-        <Route exact path="/products"></Route>
+        <Route exact path="/products/:id" children={<SingleProduct/>}></Route>
       </Switch>
     </Router>
   );

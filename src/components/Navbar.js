@@ -21,7 +21,8 @@ const Nav = () => {
             </button>
             <ul className="nav-links">
               {links.map((link) => {
-                
+                const {id, text, url} = link;
+                return <li key={id}></li>
               })}
             </ul>
           </div>

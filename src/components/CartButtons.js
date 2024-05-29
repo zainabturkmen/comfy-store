@@ -11,7 +11,7 @@ const CartButtons = () => {
     <Wrapper className="cart-btn-wrapper">
       <Link to="/cart" className="cart-btn">
         Cart
-        <span></span>
+        <span className="cart-container"></span>
       </Link>
     </Wrapper>
   );

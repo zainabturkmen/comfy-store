@@ -20,10 +20,13 @@ const Sidebar = () => {
           </button>
         </div>
         <ul className="links">
-          {links.map((link) => {
-            
+          {links.map(({id, text, url}) => {
+            return <li key={id}>
+              <Link to={url}>{text}</Link>
+            </li>
           })}
         </ul>
+        <CartButtons />
       </aside>
     </SidebarContainer>
   );

@@ -12,6 +12,7 @@ import {
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_ERROR,
 } from "../actions";
+import { type } from "@testing-library/user-event/dist/type";
 
 const initialState = {
   isSideBarOpen: false
@@ -23,7 +24,7 @@ export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const openSidebar = ()=> {
-    
+    dispatch({ type: "SIDEBAR_OPEN" });
   }
 
 

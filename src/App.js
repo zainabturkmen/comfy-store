@@ -4,6 +4,8 @@ import { Navbar, Sidebar, Footer } from './components'
 
 import styled from "styled-components"
 
+const Button = styled.button``
+
 function App() {
   return <h4>comfy sloth starter</h4>
 }

@@ -4,10 +4,7 @@ import { Navbar, Sidebar, Footer } from "./components";
 
 import styled from "styled-components";
 
-const Button = styled.button`
-  background: green;
-  color: white;
-`;
+
 
 const Div = styled.div`
 background:blue;
@@ -18,7 +15,6 @@ function App() {
   return (
     <div>
       <h4>comfy sloth starter</h4>
-      <Button>click me</Button>
     </div>
   );
 }

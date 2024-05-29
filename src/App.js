@@ -34,6 +34,10 @@ function App() {
         <Route exact path="/checkout">
           <Checkout/>
         </Route>
+        <Route exact path="*">
+          <Error/>
+        </Route>
+
       </Switch>
     </Router>
   );

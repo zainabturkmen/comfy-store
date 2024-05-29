@@ -30,15 +30,14 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
- 
-
   return (
-    <ProductsContext.Provider value={
-      {
+    <ProductsContext.Provider
+      value={{
         ...state,
-        
-      }
-    }>
+        openSidebar,
+        closeSidebar,
+      }}
+    >
       {children}
     </ProductsContext.Provider>
   );

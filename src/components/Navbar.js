@@ -9,7 +9,7 @@ import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
 
 const Nav = () => {
-  const 
+  const { closeSidebar } = useProductsContext();
   return (
     <NavContainer>
       <div className="nav-center">
@@ -31,7 +31,7 @@ const Nav = () => {
             );
           })}
         </ul>
-        <CartButtons/>
+        <CartButtons />
       </div>
     </NavContainer>
   );

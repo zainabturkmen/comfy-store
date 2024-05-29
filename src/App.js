@@ -15,16 +15,23 @@ import {
 
 function App() {
   return (
-   <Router>
-    <Switch>
-      <Route exact path="/">
-        <Home/>
-      </Route>
-      <Route exact path="/about">
-        <About/>
-      </Route>
-    </Switch>
-   </Router>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
+        <Route exact path="/products">
+          <Products />
+        </Route>
+        <Route exact path="/products"></Route>
+      </Switch>
+    </Router>
   );
 }
 

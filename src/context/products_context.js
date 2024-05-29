@@ -15,7 +15,7 @@ import {
 import { type } from "@testing-library/user-event/dist/type";
 
 const initialState = {
-  isSideBarOpen: true,
+  isSideBarOpen: false,
 };
 
 const ProductsContext = React.createContext();

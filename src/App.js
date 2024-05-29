@@ -12,7 +12,6 @@ import {
   About,
   PrivateRoute,
 } from "./pages";
-import SingleProductPage from "./pages/SingleProductPage";
 
 function App() {
   return (

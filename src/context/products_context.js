@@ -13,7 +13,9 @@ import {
   GET_SINGLE_PRODUCT_ERROR,
 } from "../actions";
 
-const initialState = {};
+const initialState = {
+  isSideBarOpen: false;
+};
 
 const ProductsContext = React.createContext();
 

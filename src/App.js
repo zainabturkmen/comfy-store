@@ -1,16 +1,26 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Navbar, Sidebar, Footer } from './components'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Navbar, Sidebar, Footer } from "./components";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Button = styled.button`
-background:
+  background: green;
+  color: white;
+`;
 
-`
+const Div = styled.div`
+background:blue;
+color:black;
+`;
 
 function App() {
-  return <h4>comfy sloth starter</h4>
+  return (
+    <div>
+      <h4>comfy sloth starter</h4>
+      <Button>click me</Button>
+    </div>
+  );
 }
 
-export default App
+export default App;

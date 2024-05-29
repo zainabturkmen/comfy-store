@@ -17,6 +17,8 @@ import SingleProductPage from "./pages/SingleProductPage";
 function App() {
   return (
     <Router>
+      <Navbar />
+      <Sidebar/>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -30,15 +32,15 @@ function App() {
         <Route exact path="/products">
           <Products />
         </Route>
-        <Route exact path="/products/:id" children={<SingleProduct/>}></Route>
+        <Route exact path="/products/:id" children={<SingleProduct />}></Route>
         <Route exact path="/checkout">
-          <Checkout/>
+          <Checkout />
         </Route>
         <Route exact path="*">
-          <Error/>
+          <Error />
         </Route>
-
       </Switch>
+      <Footer />
     </Router>
   );
 }

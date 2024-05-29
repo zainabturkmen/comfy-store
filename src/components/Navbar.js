@@ -20,7 +20,9 @@ const Nav = () => {
               <FaBars/>
             </button>
             <ul className="nav-links">
-              
+              {links.map((link) => {
+                
+              })}
             </ul>
           </div>
       </div>

@@ -30,10 +30,7 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
-  useEffect(() => {
-    openSidebar();
-    closeSidebar()
-  }, []);
+ 
 
   return (
     <ProductsContext.Provider value="products context">

@@ -13,19 +13,28 @@ const Sidebar = () => {
   const isOpen = false;
   return (
     <SidebarContainer>
-      <aside className={`${isSideBarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
+      <aside
+        className={`${isSideBarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+      >
         <div className="sidebar-header">
-          <img src={logo} className="logo" alt="comfy sloth"/>
-          <button className="close-btn" type="button">
-            <FaTimes/>
+          <img src={logo} className="logo" alt="comfy sloth" />
+          <button className="close-btn" type="button" onClick={closeSidebar}>
+            <FaTimes />
           </button>
         </div>
         <ul className="links">
-          {links.map(({id, text, url}) => {
-            return <li key={id}>
-              <Link to={url}>{text}</Link>
-            </li>
+          {links.map(({ id, text, url }) => {
+            return (
+              <li key={id}>
+                <Link to={url} onClick={closeSidebar}>
+                  {text}
+                </Link>
+              </li>
+            );
           })}
+          <li>
+            <Link to="/checkout" onClick={closeSidebar}>checkout</Link>
+          </li>
         </ul>
         <CartButtons />
       </aside>

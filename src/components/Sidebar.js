@@ -19,6 +19,11 @@ const Sidebar = () => {
             <FaTimes/>
           </button>
         </div>
+        <ul className="links">
+          {links.map((link) => {
+            
+          })}
+        </ul>
       </aside>
     </SidebarContainer>
   );

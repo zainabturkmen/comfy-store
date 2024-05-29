@@ -2,14 +2,29 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "./components";
 
-import { Home } from "./pages";
+import {
+  Home,
+  Products,
+  singleProduct,
+  Cart,
+  Checkout,
+  Error,
+  About,
+  PrivateRoute,
+} from "./pages";
 
 function App() {
   return (
-    <div>
-      <h4>comfy sloth starter</h4>
-      <Home/>
-    </div>
+   <Router>
+    <Switch>
+      <Route exact path="/">
+        <Home/>
+      </Route>
+      <Route exact path="/about">
+        <About/>
+      </Route>
+    </Switch>
+   </Router>
   );
 }
 

@@ -13,7 +13,7 @@ const Nav = () => {
     <NavContainer>
       <div className="nav-center">
           <div className="nav-header">
-            
+            <Link />
           </div>
       </div>
     </NavContainer>

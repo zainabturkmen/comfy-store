@@ -10,7 +10,7 @@ import { useUserContext } from '../context/user_context'
 
 const Sidebar = () => {
   return <SidebarContainer>
-    
+    <aside></aside>
   </SidebarContainer>
 }
 

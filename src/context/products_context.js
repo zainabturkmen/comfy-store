@@ -13,9 +13,12 @@ import {
   GET_SINGLE_PRODUCT_ERROR,
 } from "../actions";
 import { type } from "@testing-library/user-event/dist/type";
+import products_reducer from "../reducers/products_reducer";
 
 const initialState = {
   isSideBarOpen: true,
+  products_loading: false,
+  products_error:false,
 };
 
 const ProductsContext = React.createContext();

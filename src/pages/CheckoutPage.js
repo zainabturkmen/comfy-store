@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom'
 
 const CheckoutPage = () => {
   return <main>
-    <PageHero title="checkout"></PageHero>
+    <PageHero title="checkout">
+      <Wrapper className="page">
+        
+      </Wrapper>
+    </PageHero>
   </main>
 }
 const Wrapper = styled.div``

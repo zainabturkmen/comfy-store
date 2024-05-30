@@ -58,7 +58,7 @@ const SingleProductPage = () => {
   console.log(product);
 
   return <Wrapper>
-    <PageHero />
+    <PageHero title={name} />
   </Wrapper>
 };
 

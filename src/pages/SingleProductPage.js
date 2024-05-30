@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const SingleProductPage = () => {
   const { id } = useParams();
-  const history = useHistory()
+  const history = useHistory();
   const {
     single_product_loading: loading,
     single_product_error: error,
@@ -32,20 +32,34 @@ const SingleProductPage = () => {
     console.log(error);
     if (error) {
       setTimeout(() => {
-        history.push('/')
-      }, 3000)
+        history.push("/");
+      }, 3000);
     }
-  },[error])
-
+  }, [error]);
 
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
   if (error) {
-    return <Error />
+    return <Error />;
   }
 
-  return <h4>single product page</h4>;
+  const {
+    name,
+    price,
+    description,
+    stock,
+    stars,
+    reviews,
+    id: sku,
+    company,
+    images,
+  } = product;
+  console.log(product);
+
+  return <Wrapper>
+    <PageHero />
+  </Wrapper>
 };
 
 const Wrapper = styled.main`

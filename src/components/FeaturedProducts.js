@@ -7,7 +7,11 @@ import Loading from './Loading'
 import Product from './Product'
 
 const FeaturedProducts = () => {
-  const { products_loading: loading, products_error: error } = useProductsContext();
+  const {
+    products_loading: loading,
+    products_error: error,
+    featured_products: featured
+  } = useProductsContext();
   return <h4>featured products</h4>
 }
 

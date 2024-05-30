@@ -8,6 +8,7 @@ import {
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_ERROR,
 } from "../actions";
+import { single_product_url } from "../utils/constants";
 
 const products_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
@@ -43,7 +44,11 @@ const products_reducer = (state, action) => {
   }
 
   if (action.type === GET_SINGLE_PRODUCT_SUCCESS) {
-    
+    return {
+      ...state,
+      single_product_loading: false,
+      single_product: action.payload,
+    };
   }
   throw new Error(`No Matching "${action.type}" - action type`);
 };

@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <main>
       <PageHero />
-      <Wrapper className="page section">
+      <Wrapper className="page section section-center">
 
       </Wrapper>
     </main>

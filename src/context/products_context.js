@@ -30,6 +30,14 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
+
+  const fetchProducts = async (url) => {
+    
+  }
+
+
+
+
   return (
     <ProductsContext.Provider
       value={{

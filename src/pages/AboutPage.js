@@ -18,6 +18,9 @@ const AboutPage = () => {
               Provident, molestiae dolores laborum natus cumque sequi recusandae
               facere iusto delectus odit labore reprehenderit, veniam corporis
               voluptatibus. Perspiciatis velit dolores repudiandae suscipit?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
+              labore dolorem ea praesentium, laboriosam tempore ut doloremque
+              voluptas quia voluptatibus.
             </p>
           </div>
         </article>

@@ -26,7 +26,10 @@ const SingleProductPage = () => {
   useEffect(() => {
     fetchSingleProducts(`${url}${id}`);
   }, [id]);
-  console.log(product);
+
+  if (loading) {
+    return <Loading />
+  }
 
   return <h4>single product page</h4>;
 };

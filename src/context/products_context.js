@@ -55,10 +55,10 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
       const respone = await axios.get(url);
-      const single_product = respone.data;
-      dispatch({ type: GET_SINGLE_PRODUCT_BEGIN, payload: single_product });
+      const singleProduct = respone.data;
+      dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
     } catch (error) {
-      dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
+      dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
     }
   };
 

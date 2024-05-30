@@ -4,7 +4,11 @@ import { PageHero } from "../components";
 import aboutImg from "../assets/hero-bcg.jpeg";
 
 const AboutPage = () => {
-  return <main></main>
+  return (
+    <main>
+      <PageHero></PageHero>
+    </main>
+  );
 };
 
 const Wrapper = styled.section`

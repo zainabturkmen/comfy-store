@@ -19,17 +19,19 @@ const FeaturedProducts = () => {
   if (error) {
     return <Error />;
   }
-  return <Wrapper className="section">
-    <div className="title">
-      <h2>featured products</h2>
-      <div className="underline"></div>
-    </div>
-    <div className="section-center featured"> 
+  return (
+    <Wrapper className="section">
+      <div className="title">
+        <h2>featured products</h2>
+        <div className="underline"></div>
+      </div>
+      <div className="section-center featured">
         {featured.map((product) => {
-          return <Product key={product.id} {...product}/>
+          return <Product key={product.id} {...product} />;
         })}
-    </div>
-  </Wrapper>;
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`

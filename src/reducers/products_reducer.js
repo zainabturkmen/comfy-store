@@ -31,7 +31,7 @@ const products_reducer = (state, action) => {
       featured_products,
     };
   }
-  if (condition) {
+  if (action) {
     
   }
   return state;

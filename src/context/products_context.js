@@ -30,15 +30,15 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
-
   const fetchProducts = async (url) => {
-    const response = await fetch(url);
+    const response = await axios.get(url);
     const data = await response.json();
     console.log(data);
-  }
+  };
 
-
-
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   return (
     <ProductsContext.Provider

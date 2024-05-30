@@ -11,18 +11,18 @@ import {
 
 const products_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
-    return { ...state, isSideBarOpen: true};
+    return { ...state, isSideBarOpen: true };
   }
   if (action.type === SIDEBAR_CLOSE) {
-    return { ...state, isSideBarOpen: false};
+    return { ...state, isSideBarOpen: false };
   }
   if (action.type === GET_PRODUCTS_BEGIN) {
-    return { ...state, products_loading: true};
+    return { ...state, products_loading: true };
   }
   if (action.type === GET_PRODUCTS_SUCCESS) {
-    const featured_products = action.payload.filter((products) => products.featured
-  )
-    return{...state,}
+    const featured_products = action.payload.filter(
+      (products) => products.featured
+    );
   }
   return state;
   throw new Error(`No Matching "${action.type}" - action type`);

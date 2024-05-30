@@ -49,7 +49,7 @@ export const ProductsProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchProducts(`${url}s`);
+    fetchProducts(url);
   }, []);
 
   return (

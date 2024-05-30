@@ -31,12 +31,13 @@ export const ProductsProvider = ({ children }) => {
   const openSidebar = () => {
     dispatch({ type: SIDEBAR_OPEN });
   };
-  
+
   const closeSidebar = () => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
   const fetchProducts = async (url) => {
+    dispatch({type:})
     const response = await axios.get(url);
     console.log(response);
   };

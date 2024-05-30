@@ -3,7 +3,14 @@ import styled from 'styled-components'
 import { services } from '../utils/constants'
 
 const Services = () => {
-  return <h4>services </h4>
+  return <Wrapper>
+    <div className='section-center'>
+      <article className='header'>
+        <h3>custom furniture <br/> 
+        built only for you </h3>
+      </article>
+    </div>
+  </Wrapper>
 }
 
 const Wrapper = styled.section`

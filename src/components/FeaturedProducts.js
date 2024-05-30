@@ -12,6 +12,10 @@ const FeaturedProducts = () => {
     products_error: error,
     featured_products: featured
   } = useProductsContext();
+
+  if (loading) {
+    return <Loading />
+  }
   return <h4>featured products</h4>
 }
 

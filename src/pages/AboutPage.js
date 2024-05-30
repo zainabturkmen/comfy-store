@@ -6,7 +6,8 @@ import aboutImg from "../assets/hero-bcg.jpeg";
 const AboutPage = () => {
   return (
     <main>
-      <PageHero></PageHero>
+      <PageHero />
+      <Wrapper />
     </main>
   );
 };

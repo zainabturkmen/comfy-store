@@ -32,8 +32,7 @@ export const ProductsProvider = ({ children }) => {
 
   const fetchProducts = async (url) => {
     const response = await axios.get(url);
-    const data = await response.json();
-    console.log(data);
+    console.log(response);
   };
 
   useEffect(() => {

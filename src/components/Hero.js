@@ -21,6 +21,10 @@ const Hero = () => {
           shop now
         </Link>
       </article>
+      <article className="img-container">
+        <img src={heroBcg} alt="nice table" className="main-img" />
+        <img src={heroBcg2} alt="person working here" className="accent-img" />
+      </article>
     </Wrapper>
   );
 };

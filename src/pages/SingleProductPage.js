@@ -24,8 +24,8 @@ const SingleProductPage = () => {
   } = useProductsContext();
 
   useEffect(() => {
-    
-  },[])
+
+  },[id])
 
 
   return <h4>single product page</h4>;

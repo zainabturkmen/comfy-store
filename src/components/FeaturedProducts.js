@@ -19,19 +19,7 @@ const FeaturedProducts = () => {
   if (error) {
     return <Error />;
   }
-  return (
-    <Wrapper className="section">
-      <div className="title">
-        <h2>featured products</h2>
-        <div className="underline"></div>
-      </div>
-      <div className="section-center featured">
-        {featured.slice(0, 3).map((product) => {
-          return <Product key={product.id} {...product} />;
-        })}
-      </div>
-    </Wrapper>
-  );
+  return <h1>hello</h1>;
 };
 
 const Wrapper = styled.section`

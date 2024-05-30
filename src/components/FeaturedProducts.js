@@ -7,6 +7,7 @@ import Loading from './Loading'
 import Product from './Product'
 
 const FeaturedProducts = () => {
+  const {}
   return <h4>featured products</h4>
 }
 

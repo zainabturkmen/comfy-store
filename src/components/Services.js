@@ -17,7 +17,11 @@ const Services = () => {
             voluptas quia voluptatibus.
           </p>
         </article>
-        <div className="services-center"></div>
+        <div className="services-center">
+          {services.map((service) => {
+            const { id, icone, title, text } = service;
+          })}
+        </div>
       </div>
     </Wrapper>
   );

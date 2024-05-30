@@ -31,7 +31,7 @@ const Nav = () => {
             );
           })}
           <li>
-            <Link to="/checkout" >
+            <Link to="/checkout">
               checkout
             </Link>
           </li>

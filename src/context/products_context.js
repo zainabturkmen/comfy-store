@@ -48,6 +48,12 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+
+  const fetchSingleProducts = async (url) => {
+    dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
+  }
+  
+
   useEffect(() => {
     fetchProducts(url);
   }, []);

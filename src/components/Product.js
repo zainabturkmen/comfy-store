@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom'
 
 const Product = ({image, name, price, id}) => {
   return <Wrapper>
-    <div className='container'></div>
+    <div className='container'>
+      <img src={image} alt={name} />
+      <Link to={`/products`}></Link>
+    </div>
   </Wrapper>
 }
 

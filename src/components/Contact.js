@@ -21,6 +21,7 @@ const Contact = () => {
               type="email"
               className="form-input"
               placeholder="enter email"
+              name="_replyto"
             />
             <button type="submit" className="submit-btn">
               {" "}

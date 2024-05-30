@@ -1,17 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
-import { services } from '../utils/constants'
+import React from "react";
+import styled from "styled-components";
+import { services } from "../utils/constants";
 
 const Services = () => {
-  return <Wrapper>
-    <div className='section-center'>
-      <article className='header'>
-        <h3>custom furniture <br/> 
-        built only for you </h3>
-      </article>
-    </div>
-  </Wrapper>
-}
+  return (
+    <Wrapper>
+      <div className="section-center">
+        <article className="header">
+          <h3>
+            custom furniture <br />
+            built only for you
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
+            labore dolorem ea praesentium, laboriosam tempore ut doloremque
+            voluptas quia voluptatibus.
+          </p>
+        </article>
+        <div className="services-center"></div>
+      </div>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   h3,
@@ -75,5 +85,5 @@ const Wrapper = styled.section`
       transform: translateY(5rem);
     }
   }
-`
-export default Services
+`;
+export default Services;

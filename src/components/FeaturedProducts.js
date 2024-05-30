@@ -19,7 +19,9 @@ const FeaturedProducts = () => {
   if (error) {
     return <Error />;
   }
-  return <Wrapper className=""></Wrapper>
+  return <Wrapper className="section">
+    <div className="title"></div>
+  </Wrapper>;
 };
 
 const Wrapper = styled.section`

@@ -1,5 +1,5 @@
 export const formatPrice = (number) => {
-    const newNumber = Intl.NumberFormat("en-US");
+    const newNumber = Intl.NumberFormat("en-US", );
     return 
 }
 

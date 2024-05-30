@@ -44,6 +44,7 @@ export const ProductsProvider = ({ children }) => {
       dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
     } catch (error) {
       console.log(error);
+      dispatch({type:})
     }
   };
 

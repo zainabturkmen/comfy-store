@@ -18,9 +18,9 @@ import products_reducer from "../reducers/products_reducer";
 const initialState = {
   isSideBarOpen: true,
   products_loading: false,
-  products_error:false,
+  products_error: false,
   products: [],
-  featured_products: []
+  featured_products: [],
 };
 
 const ProductsContext = React.createContext();

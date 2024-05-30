@@ -31,8 +31,8 @@ const products_reducer = (state, action) => {
       featured_products,
     };
   }
-  if (action) {
-    
+  if (action.type === GET_PRODUCTS_ERROR) {
+    return { ...state, products_loading: false, products_error: true };
   }
   return state;
   throw new Error(`No Matching "${action.type}" - action type`);

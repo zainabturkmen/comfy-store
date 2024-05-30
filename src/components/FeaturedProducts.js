@@ -20,7 +20,9 @@ const FeaturedProducts = () => {
     return <Error />;
   }
   return <Wrapper className="section">
-    <div className="title"></div>
+    <div className="title">
+      <h2>featured</h2>
+    </div>
   </Wrapper>;
 };
 

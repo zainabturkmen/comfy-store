@@ -7,7 +7,9 @@ const Stars = ({ stars, reviews }) => {
     <Wrapper>
       <div className="stars">
         {/* star */}
-        <span></span>
+        <span>
+          {stars >= 1? }
+        </span>
         {/* end of star */}
       </div>
       <p className="reviews">({reviews} customer reviews)</p>

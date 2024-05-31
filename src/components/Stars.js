@@ -5,8 +5,10 @@ const Stars = ({ stars, reviews }) => {
   console.log(stars, reviews);
   return (
     <Wrapper>
-      <div className="stars"></div>
-      <p className="reviews">({})</p>
+      <div className="stars">
+        <span></span>
+      </div>
+      <p className="reviews">({reviews} customer reviews)</p>
     </Wrapper>
   );
 };

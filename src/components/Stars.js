@@ -9,13 +9,14 @@ const Stars = ({ stars, reviews }) => {
 </span>; */
   }
 
-  const tempStars = Array
+  const tempStars = Array.from({ length: 5 }, (_, index) => {
+    //  index 0-4
+  });
+  console.log(tempStars);
 
   return (
     <Wrapper>
-      <div className="stars">
-
-      </div>
+      <div className="stars"></div>
       <p className="reviews">({reviews} customer reviews)</p>
     </Wrapper>
   );

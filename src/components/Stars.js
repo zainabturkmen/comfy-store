@@ -6,6 +6,7 @@ const Stars = ({ stars, reviews }) => {
   return (
     <Wrapper>
       <div className="stars"></div>
+      <p className="reviews">({})</p>
     </Wrapper>
   );
 };

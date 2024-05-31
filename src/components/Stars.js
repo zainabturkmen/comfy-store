@@ -9,10 +9,12 @@ const Stars = ({ stars, reviews }) => {
 </span>; */
   }
 
+  const tempStars = Array
+
   return (
     <Wrapper>
       <div className="stars">
-        
+
       </div>
       <p className="reviews">({reviews} customer reviews)</p>
     </Wrapper>

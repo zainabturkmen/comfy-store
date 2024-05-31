@@ -6,7 +6,9 @@ const Stars = ({ stars, reviews }) => {
   return (
     <Wrapper>
       <div className="stars">
+        {/* star */}
         <span></span>
+        {/* end of star */}
       </div>
       <p className="reviews">({reviews} customer reviews)</p>
     </Wrapper>

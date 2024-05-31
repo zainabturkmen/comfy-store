@@ -8,7 +8,24 @@ const Stars = ({ stars, reviews }) => {
       <div className="stars">
         {/* star */}
         <span>
-          {stars >= 1? }
+          {stars >= 1 ? (
+            <BsStarFill />
+          ) : stars >= 0.5 ? (
+            <BsStarHalf />
+          ) : (
+            <BsStar />
+          )}
+        </span>
+        {/* end of star */}
+        {/* star */}
+        <span>
+          {stars >= 2 ? (
+            <BsStarFill />
+          ) : stars >= 1.5 ? (
+            <BsStarHalf />
+          ) : (
+            <BsStar />
+          )}
         </span>
         {/* end of star */}
       </div>

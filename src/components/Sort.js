@@ -4,8 +4,14 @@ import { BsFillGridFill, BsList } from 'react-icons/bs'
 import styled from 'styled-components'
 
 const Sort = () => {
-  const {filtered_products} = useFilterContext()
-  return <h4>sort </h4>
+  const { filtered_products: products, grid_view } = useFilterContext();
+  return <Wrapper>
+    <div className='btn-container'>
+      <button type='button'>
+        <BsFillGridFill />
+      </button>
+    </div>
+  </Wrapper>
 }
 
 const Wrapper = styled.section`

@@ -8,17 +8,26 @@ import Product from "./Product";
 
 const AddToCart = ({ product }) => {
   const { id, stock, colors } = product;
-console.log(colors);
+  console.log(colors);
   const [mainColor, setMainColor] = useState(colors[0]);
-
 
   return (
     <Wrapper>
       <div className="colors">
         <span>colors : </span>
-        <div>{colors.map((color, index)=> {
-          return <button key={index} className="color">{index}</button>
-        })}</div>
+        <div>
+          {colors.map((color, index) => {
+            return (
+              <button
+                key={index}
+                style={{ background: color }}
+                className="color-btn"
+              >
+                {index}
+              </button>
+            );
+          })}
+        </div>
       </div>
       <div className="btn-container"></div>
     </Wrapper>

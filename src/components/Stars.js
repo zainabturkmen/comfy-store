@@ -9,7 +9,7 @@ const Stars = ({ stars, reviews }) => {
     //  index 0-4
     const number = index + 0.5;
     return (
-      <span>
+      <span key={index}>
         {stars >= index + 1 ? (
           <BsStarFill />
         ) : stars >= number ? (
@@ -25,7 +25,7 @@ const Stars = ({ stars, reviews }) => {
   return (
     <Wrapper>
       <div className="stars">
-        {}
+        {tempStars}
       </div>
       <p className="reviews">({reviews} customer reviews)</p>
     </Wrapper>

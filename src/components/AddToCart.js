@@ -11,7 +11,11 @@ const AddToCart = ({ product }) => {
 
   const [mainColor, setMainColor] = useState(colors[0]);
 
-  return <Wrapper></Wrapper>
+  return (
+    <Wrapper>
+      <div className="colors"></div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`

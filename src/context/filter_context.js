@@ -30,6 +30,11 @@ export const FilterProvider = ({ children }) => {
   }, [products])
 
 
+
+  const setGridView = () => {
+    
+  }
+
   return (
     <FilterContext.Provider value= {{
       ...state,

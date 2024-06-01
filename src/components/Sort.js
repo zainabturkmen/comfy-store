@@ -16,17 +16,15 @@ const Sort = () => {
           <BsList />
         </button>
       </div>
-      <p>
-        {products.length} products found
-      </p>
-      <hr/>
+      <p>{products.length} products found</p>
+      <hr />
       <form>
-        <label htmlFor='sort'>sort by</label>
-        <select name='sort' id='sort' className='sort-input'>
+        <label htmlFor="sort">sort by</label>
+        <select name="sort" id="sort" className="sort-input">
           <option value="price-lowest">price (lowest)</option>
-          <option value="price-lowest">price (lowest)</option>
-          <option value="price-lowest">price (lowest)</option>
-          <option value="price-lowest">price (lowest)</option>
+          <option value="price-highest">price (highest)</option>
+          <option value="name-a">price (a-z)</option>
+          <option value="name-z">price (z-a)</option>
         </select>
       </form>
     </Wrapper>

@@ -17,7 +17,7 @@ console.log(colors);
       <div className="colors">
         <span>colors : </span>
         <div>{colors.map((color, index)=> {
-          return <button key={index}>{index}</button>
+          return <button key={index} className="color">{index}</button>
         })}</div>
       </div>
       <div className="btn-container"></div>

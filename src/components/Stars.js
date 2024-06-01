@@ -3,15 +3,12 @@ import styled from "styled-components";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 const Stars = ({ stars, reviews }) => {
-  {
-    /* <span>
-  {stars >= 1 ? <BsStarFill /> : stars >= 0.5 ? <BsStarHalf /> : <BsStar />}
-</span>; */
-  }
+
 
   const tempStars = Array.from({ length: 5 }, (_, index) => {
-    //  index 0-4 
+    //  index 0-4
     const number = index + 0.5;
+    return;
   });
   console.log(tempStars);
 

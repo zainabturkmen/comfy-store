@@ -14,7 +14,7 @@ import { useProductsContext } from './products_context'
 import filter_reducer from '../reducers/filter_reducer'
 
 const initialState = {
-  filter_products: [],
+  filtered_products: [],
   all_products: [],
 };
 

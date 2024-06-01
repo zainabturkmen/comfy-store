@@ -9,7 +9,8 @@ import Product from "./Product";
 const AddToCart = ({ product }) => {
   const { id, stock, colors } = product;
 
-  const [mainColor, setMainColor] = 
+  const [mainColor, setMainColor] = useState(colors[0]);
+  
   return <h4>addToCart </h4>;
 };
 

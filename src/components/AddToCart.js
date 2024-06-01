@@ -22,6 +22,7 @@ const AddToCart = ({ product }) => {
                 key={index}
                 style={{ background: color }}
                 className="color-btn"
+                onClick={() => setMainColor(color)}
               >
                 {index}
               </button>

@@ -16,10 +16,18 @@ const Sort = () => {
   return (
     <Wrapper>
       <div className="btn-container">
-        <button type="button" className={`${grid_view ? "active" : null}`} onClick={setGridView}>
+        <button
+          type="button"
+          className={`${grid_view ? "active" : null}`}
+          onClick={setGridView}
+        >
           <BsFillGridFill />
         </button>
-        <button type="button" className={`${!grid_view ? "active" : null}`} onClick={setListView}>
+        <button
+          type="button"
+          className={`${!grid_view ? "active" : null}`}
+          onClick={setListView}
+        >
           <BsList />
         </button>
       </div>
@@ -27,7 +35,13 @@ const Sort = () => {
       <hr />
       <form>
         <label htmlFor="sort">sort by</label>
-        <select name="sort" id="sort" className="sort-input" value={sort} onChange={updateSort}>
+        <select
+          name="sort"
+          id="sort"
+          className="sort-input"
+          value={sort}
+          onChange={updateSort}
+        >
           <option value="price-lowest">price (lowest)</option>
           <option value="price-highest">price (highest)</option>
           <option value="name-a">price (a-z)</option>

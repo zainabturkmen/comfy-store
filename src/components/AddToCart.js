@@ -8,6 +8,8 @@ import Product from "./Product";
 
 const AddToCart = ({ product }) => {
   const { id, stock, colors } = product;
+
+  const [mainColor, setMainColor] = 
   return <h4>addToCart </h4>;
 };
 

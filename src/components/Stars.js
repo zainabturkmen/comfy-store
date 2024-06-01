@@ -8,8 +8,18 @@ const Stars = ({ stars, reviews }) => {
   const tempStars = Array.from({ length: 5 }, (_, index) => {
     //  index 0-4
     const number = index + 0.5;
-    return;
-  });
+    return (
+      <span>
+        {stars >= 1 ? (
+          <BsStarFill />
+        ) : stars >= 0.5 ? (
+          <BsStarHalf />
+        ) : (
+          <BsStar />
+        )}
+      </span>
+    );
+  })
   console.log(tempStars);
 
   return (

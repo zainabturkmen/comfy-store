@@ -39,16 +39,17 @@ export const FilterProvider = ({ children }) => {
   };
 
   const updateSort = (e) => {
-    const name = e.target.name
-    const
-  }
+    const name = e.target.name;
+    const value = e.target.value;
+  };
 
   return (
     <FilterContext.Provider
       value={{
         ...state,
         setGridView,
-        setListView
+        setListView,
+        updateSort,
       }}
     >
       {children}

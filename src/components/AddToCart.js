@@ -10,7 +10,7 @@ const AddToCart = ({ product }) => {
   const { id, stock, colors } = product;
   console.log(colors);
   const [mainColor, setMainColor] = useState(colors[0]);
-
+  const [amount, setAmount] = useState(1)
   return (
     <Wrapper>
       <div className="colors">

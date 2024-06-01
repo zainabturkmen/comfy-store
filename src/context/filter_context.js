@@ -25,8 +25,8 @@ export const FilterProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState );
 
   useEffect(() => {
-    
-  }, [])
+    dispatch({type: LOAD_PRODUCTS, payload:products})
+  }, [products])
 
 
   return (

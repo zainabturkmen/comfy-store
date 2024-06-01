@@ -12,6 +12,7 @@ import {
 } from "../actions";
 import { useProductsContext } from "./products_context";
 import filter_reducer from "../reducers/filter_reducer";
+import { type } from "@testing-library/user-event/dist/type";
 
 const initialState = {
   filtered_products: [],
@@ -30,6 +31,11 @@ export const FilterProvider = ({ children }) => {
     dispatch({ type: LOAD_PRODUCTS, payload: products });
   }, [products]);
 
+
+  useEffect(()=> {
+    dispatch({type: SORT_PRODUCTS})
+  },[products, state.sort])
+
   const setGridView = () => {
     dispatch({ type: SET_GRIDVIEW });
   };
@@ -42,7 +48,7 @@ export const FilterProvider = ({ children }) => {
     // for demonstration 
     // const name = e.target.name;
     const value = e.target.value;
-    console.log(name, value);
+    dispatch({type: UPDATE_SORT, payload: value})
   };
 
   return (

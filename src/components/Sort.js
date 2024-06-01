@@ -2,7 +2,9 @@ import React from 'react'
 import { useFilterContext } from '../context/filter_context'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
 import styled from 'styled-components'
+
 const Sort = () => {
+  const {filtered_products} = useFilterContext()
   return <h4>sort </h4>
 }
 

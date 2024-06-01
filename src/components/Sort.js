@@ -11,7 +11,7 @@ const Sort = () => {
         <button type="button" className={`${grid_view ? "active" : null}`}>
           <BsFillGridFill />
         </button>
-        <button type="button" className={`${grid_view ? "active" : null}`}>
+        <button type="button" className={`${!grid_view ? "active" : null}`}>
           <BsList />
         </button>
       </div>

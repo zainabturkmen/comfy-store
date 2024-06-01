@@ -5,13 +5,18 @@ import styled from 'styled-components'
 
 const Sort = () => {
   const { filtered_products: products, grid_view } = useFilterContext();
-  return <Wrapper>
-    <div className='btn-container'>
-      <button type='button'>
-        <BsFillGridFill />
-      </button>
-    </div>
-  </Wrapper>
+  return (
+    <Wrapper>
+      <div className="btn-container">
+        <button type="button" className={`${grid_view ? "active" : null}`}>
+          <BsFillGridFill />
+        </button>
+        <button type="button" className={`${grid_view ? "active" : null}`}>
+          <BsList />
+        </button>
+      </div>
+    </Wrapper>
+  );
 }
 
 const Wrapper = styled.section`

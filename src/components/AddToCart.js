@@ -12,7 +12,11 @@ const AddToCart = ({ product }) => {
   const [mainColor, setMainColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
 
-  const increase = () => {};
+  const increase = () => {
+    setAmount(()=> {
+      
+    })
+  };
 
   const decrease = () => {};
 

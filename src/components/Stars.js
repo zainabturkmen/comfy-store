@@ -10,9 +10,9 @@ const Stars = ({ stars, reviews }) => {
     const number = index + 0.5;
     return (
       <span>
-        {stars >= 1 ? (
+        {stars >= index + 1 ? (
           <BsStarFill />
-        ) : stars >= 0.5 ? (
+        ) : stars >= number ? (
           <BsStarHalf />
         ) : (
           <BsStar />

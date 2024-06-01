@@ -5,7 +5,12 @@ import styled from 'styled-components'
 import Product from './Product'
 
 const Sort = () => {
-  const { filtered_products: products, grid_view } = useFilterContext();
+  const {
+    filtered_products: products,
+    grid_view,
+    setGridView,
+    setListView,
+  } = useFilterContext();
   return (
     <Wrapper>
       <div className="btn-container">

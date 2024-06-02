@@ -133,7 +133,9 @@ const Filters = () => {
               value={price}
             />
           </div>
-          {/*end of price */}
+          {/* end of price */}
+          {/* shipping */}
+          {/* end of shipping */}
         </form>
       </div>
     </Wrapper>

@@ -123,7 +123,8 @@ const Filters = () => {
           {/* price */}
           <div className="form-control">
             <h5>price</h5>
-            <div className="price">{formatPrice(price)}</div>
+            <p className="price">{formatPrice(price)}</p>
+            <input type="range" name="price" />
           </div>
           {/*end of price */}
         </form>

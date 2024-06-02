@@ -22,7 +22,8 @@ const initialState = {
   filters:{
     text:"",
     company:"all",
-    category:"all"
+    category:"all",
+    color: "all",
   }
 };
 

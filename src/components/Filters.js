@@ -93,10 +93,11 @@ const Filters = () => {
                     key={index}
                     name="color"
                     style={{ background: c }}
-                    className={`${color === c ? "active" : "color-btn"}`} 
+                    className={`${color === c ? "color-btn active" : "color-btn"}`}
                     data-color={c}
+                    onClick={updateFilters}
                   >
-                    {c}
+                    {color === c ? <FaCheck /> : null}
                   </button>
                 );
               })}

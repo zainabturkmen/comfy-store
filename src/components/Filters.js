@@ -44,7 +44,14 @@ const Filters = () => {
           </div>
           {/* end of search input */}
           {/* categories */}
-          
+          <div className="form-control">
+            <h5>category</h5>
+            <div>
+              {categories.map((C, index)=> {
+                 return <button key={index}>{C}</button>
+              })}
+            </div>
+          </div>
           {/*end of categories */}
         </form>
       </div>

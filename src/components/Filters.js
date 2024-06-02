@@ -16,8 +16,28 @@ const Filters = () => {
       max_price,
       shipping,
     },
+    updateFilters,
+    clearFilters,
+    all_products,
   } = useFilterContext();
-  return <Wrapper>filters</Wrapper>;
+  return (
+    <Wrapper>
+      <div className="content">
+        <form onSubmit={(e) => e.preventDefault()}>
+          {/* search input */}
+          <div className="form-control">
+            <input
+              type="text"
+              name="text"
+              placeholder="search"
+              className="search-input"
+            />
+          </div>
+          {/* end of search input */}
+        </form>
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`

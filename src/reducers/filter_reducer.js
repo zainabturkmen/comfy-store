@@ -58,7 +58,7 @@ const filter_reducer = (state, action) => {
     return { ...state, filters: { ...state.filters, [name]: value } };
   }
   if (action.type === FILTER_PRODUCTS) {
-    
+    const {all_products} = state;
     return { ...state };
   }
   if (action.type === CLEAR_FILTERS) {

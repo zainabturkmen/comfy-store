@@ -54,23 +54,22 @@ const filter_reducer = (state, action) => {
     return { ...state, filtered_products: tempProduct };
   }
   if (action.type === UPDATE_FILTERS) {
-    const {name, value} = action.payload;
-    return {...state, filters:{...state.filters, [name]:value}}
+    const { name, value } = action.payload;
+    return { ...state, filters: { ...state.filters, [name]: value } };
   }
   if (action.type === FILTER_PRODUCTS) {
-    return{...state}
+    return { ...state };
   }
   if (action.type === CLEAR_FILTERS) {
     return {
       ...state,
       filters: {
+        ...state.filters,
         text: "",
         company: "all",
         category: "all",
         color: "all",
-        min_price: 0,
-        max_price: 0,
-        price: 0,
+        price: state.filters.max_price,
         shipping: false,
       },
     };

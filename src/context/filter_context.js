@@ -72,7 +72,7 @@ export const FilterProvider = ({ children }) => {
         setListView,
         updateSort,
         updateFilters,
-        clearFilters
+        clearFilters,
       }}
     >
       {children}

@@ -22,7 +22,9 @@ const Filters = () => {
   } = useFilterContext();
 
 
-  const categories = getUniqueValues()
+  const categories = getUniqueValues(all_products, "category");
+  const companies = getUniqueValues(all_products, "category");
+  const categories = getUniqueValues(all_products, "category");
 
   return (
     <Wrapper>

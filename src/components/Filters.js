@@ -120,6 +120,9 @@ const Filters = () => {
             </div>
           </div>
           {/*end of colors */}
+          {/* price */}
+          
+          {/*end of price */}
         </form>
       </div>
     </Wrapper>

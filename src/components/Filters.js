@@ -73,7 +73,13 @@ const Filters = () => {
               onChange={updateFilters}
               className="company"
             >
-              {companies}
+              {companies.map((c, index) => {
+                return (
+                  <option key={index} value={c}>
+                    {c}
+                  </option>
+                );
+              })}
             </select>
           </div>
           {/* end of companies */}

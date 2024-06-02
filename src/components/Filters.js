@@ -84,7 +84,24 @@ const Filters = () => {
           </div>
           {/* end of companies */}
           {/* colors */}
-          
+          <div className="form-control">
+            <h5>colors</h5>
+            <div className="colors">
+              {colors.map((c, index) => {
+                return (
+                  <button
+                    key={index}
+                    name="color"
+                    style={{ background: c }}
+                    className={`${color === c ? "active" : "color-btn"}`} 
+                    data-color={c}
+                  >
+                    {c}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
           {/*end of colors */}
         </form>
       </div>

@@ -49,6 +49,7 @@ const Filters = () => {
                 if (C === "all") {
                   return (
                     <button
+                    key={index}
                       name="color"
                       onClick={updateFilters}
                       data-color="all"

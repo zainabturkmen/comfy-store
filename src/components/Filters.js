@@ -47,7 +47,9 @@ const Filters = () => {
             <h5>category</h5>
             <div>
               {categories.map((C, index) => {
-                if(c === "all")
+                if(c === "all"){
+                  return <button name="color" onClick={updateFilters}></button>
+                }
                 return (
                   <button
                     key={index}

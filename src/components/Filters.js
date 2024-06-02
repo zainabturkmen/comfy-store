@@ -47,6 +47,7 @@ const Filters = () => {
             <h5>category</h5>
             <div>
               {categories.map((C, index) => {
+                if(c === "all")
                 return (
                   <button
                     key={index}

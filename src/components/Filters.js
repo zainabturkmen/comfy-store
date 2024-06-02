@@ -47,8 +47,19 @@ const Filters = () => {
             <h5>category</h5>
             <div>
               {categories.map((C, index) => {
-                if(c === "all"){
-                  return <button name="color" onClick={updateFilters}></button>
+                if (C === "all") {
+                  return (
+                    <button
+                      name="color"
+                      onClick={updateFilters}
+                      data-color="all"
+                      className={`${
+                        color === "all" ? "all-btn active" : "all-btn"
+                      }`}
+                    >
+                      all
+                    </button>
+                  );
                 }
                 return (
                   <button
@@ -96,7 +107,9 @@ const Filters = () => {
                     key={index}
                     name="color"
                     style={{ background: c }}
-                    className={`${color === c ? "color-btn active" : "color-btn"}`}
+                    className={`${
+                      color === c ? "color-btn active" : "color-btn"
+                    }`}
                     data-color={c}
                     onClick={updateFilters}
                   >

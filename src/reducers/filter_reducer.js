@@ -10,6 +10,8 @@ import {
   CLEAR_FILTERS,
 } from "../actions";
 import { all } from "axios";
+import Product from "../components/Product";
+import { ProductImages } from "../components";
 
 const filter_reducer = (state, action) => {
   if (action.type === LOAD_PRODUCTS) {
@@ -59,10 +61,18 @@ const filter_reducer = (state, action) => {
     return { ...state, filters: { ...state.filters, [name]: value } };
   }
   if (action.type === FILTER_PRODUCTS) {
-    const {all_products} = state;
-    const{text, category, company, color, price, shipping} = state.filters
-    let tempProducts = [...all_products]
+    const { all_products } = state;
+    const { text, category, company, color, price, shipping } = state.filters;
+    let tempProducts = [...all_products];
+
+    if (text) {
+      tempProducts = tempProducts.filter((product)=> {
+        return product.name.toLowerCase().startsWith(text)
+      })
+    }
+
     // filtering
+    // text
     return { ...state, filtered_products: tempProducts };
   }
   if (action.type === CLEAR_FILTERS) {

@@ -94,13 +94,15 @@ const filter_reducer = (state, action) => {
       });
     }
 
-    // price 
+    // price
 
-    tempProducts = tempProducts.filter((product) => product.price)
+    tempProducts = tempProducts.filter((product) => product.price);
     // shipping
 
     if (shipping) {
-      tempProducts = tempProducts.filter((product) => product.shipping ===  )
+      tempProducts = tempProducts.filter(
+        (product) => product.shipping <= price
+      );
     }
 
     return { ...state, filtered_products: tempProducts };

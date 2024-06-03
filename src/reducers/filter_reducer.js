@@ -90,8 +90,8 @@ const filter_reducer = (state, action) => {
 
     if (color !== "all") {
       tempProducts = tempProducts.filter((product) => {
-        
-      })
+        return product.colors.find((c) => c === color);
+      });
     }
 
     return { ...state, filtered_products: tempProducts };

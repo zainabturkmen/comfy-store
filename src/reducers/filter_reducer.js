@@ -95,10 +95,12 @@ const filter_reducer = (state, action) => {
     }
 
     // price 
+
+    tempProducts = tempProducts.filter((product) => product.price)
     // shipping
 
     if (shipping) {
-      tempProducts = tempProducts.filter((product) => )
+      tempProducts = tempProducts.filter((product) => product.shipping ===  )
     }
 
     return { ...state, filtered_products: tempProducts };

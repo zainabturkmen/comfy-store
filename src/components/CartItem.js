@@ -4,8 +4,27 @@ import { formatPrice } from '../utils/helpers'
 import AmountButtons from './AmountButtons'
 import { FaTrash } from 'react-icons/fa'
 import { useCartContext } from '../context/cart_context'
+
+
 const CartItem = () => {
-  return <h4>cart item</h4>
+  const { removeItem, toggleAmount} = useCartContext();
+
+
+  const increase = () => {
+
+  }
+
+  const decrease = () => {
+
+  }
+
+
+
+  return <Wrapper>
+    <div className='title'>
+      
+    </div>
+     </Wrapper>
 }
 
 const Wrapper = styled.article`

@@ -97,6 +97,10 @@ const filter_reducer = (state, action) => {
     // price 
     // shipping
 
+    if () {
+      
+    }
+
     return { ...state, filtered_products: tempProducts };
   }
   if (action.type === CLEAR_FILTERS) {

@@ -52,9 +52,11 @@ const cart_reducer = (state, action) => {
     const {id, value} = action.payload;
     const tempCart = state.cart.map((item) => {
       if (item.id === id) {
-        
+        if (value === "inc") {
+          
+        }
       }else{
-        
+        return item
       }
     })
 

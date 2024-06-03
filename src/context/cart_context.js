@@ -36,7 +36,9 @@ export const CartProvider = ({ children }) => {
   };
 
   // remove item
-  const removeItem = (id) => {};
+  const removeItem = (id) => {
+    dispatch
+  };
   // toggle amount
   const toggleAmount = (id, value) => {};
 

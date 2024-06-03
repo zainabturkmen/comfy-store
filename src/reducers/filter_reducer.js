@@ -74,7 +74,9 @@ const filter_reducer = (state, action) => {
     }
 
     // category 
-
+    if (category) {
+      
+    }
     // company
 
     return { ...state, filtered_products: tempProducts };

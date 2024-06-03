@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
 
 
   useEffect(() => {
-
+    localStorage
   },[state.cart])
 
   return (

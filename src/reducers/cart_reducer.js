@@ -16,14 +16,15 @@ const cart_reducer = (state, action) => {
         if (CartItem.id === id + color) {
           let newAmount = CartItem.amount + amount;
           if (newAmount > CartItem.max) {
-            
+            newAmount = CartItem.max;
           }
-        }else{
+          return { ...CartItem, amount: newAmount };
+        } else {
           return CartItem;
         }
-      })
+      });
 
-      return{...state, cart:tempCart}
+      return { ...state, cart: tempCart };
     } else {
       const newItem = {
         id: id + color,

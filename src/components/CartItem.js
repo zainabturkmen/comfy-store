@@ -26,7 +26,8 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
       </div>
 
       <h5 className="price">{formatPrice(price)}</h5>
-      <AmountButtons />
+      <AmountButtons amount={amount} increase={increase} decrease={decrease} />
+      <h5 className="subtotal">{formatPrice(price * amount)}</h5>
     </Wrapper>
   );
 };

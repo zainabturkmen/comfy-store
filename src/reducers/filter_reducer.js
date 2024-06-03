@@ -86,6 +86,14 @@ const filter_reducer = (state, action) => {
       );
     }
 
+    // colors
+
+    if (color !== "all") {
+      tempProducts = tempProducts.filter((product) => {
+        
+      })
+    }
+
     return { ...state, filtered_products: tempProducts };
   }
   if (action.type === CLEAR_FILTERS) {

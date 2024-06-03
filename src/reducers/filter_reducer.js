@@ -74,8 +74,8 @@ const filter_reducer = (state, action) => {
     }
 
     // category 
-    if (category) {
-      
+    if (category !== "all") {
+      tempProducts  = tempProducts.filter((product)=> product.category === category)
     }
     // company
 

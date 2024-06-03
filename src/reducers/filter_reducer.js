@@ -94,6 +94,9 @@ const filter_reducer = (state, action) => {
       });
     }
 
+    // price 
+    // shipping
+
     return { ...state, filtered_products: tempProducts };
   }
   if (action.type === CLEAR_FILTERS) {

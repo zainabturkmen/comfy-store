@@ -7,6 +7,7 @@ import CartItem from './CartItem'
 import CartTotals from './CartTotals'
 
 const CartContent = () => {
+  const {cart, clearCart} = useCartContext()
   return <h4>cart content </h4>
 }
 const Wrapper = styled.section`

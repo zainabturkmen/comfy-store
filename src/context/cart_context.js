@@ -8,6 +8,7 @@ import {
   COUNT_CART_TOTALS,
 } from "../actions";
 import { products_url } from "../utils/constants";
+import { type } from "@testing-library/user-event/dist/type";
 
 const getLocalStorage = () => {
   let cart = localStorage.getItem("cart");
@@ -50,6 +51,7 @@ export const CartProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    dispatch({type:COUNT_CART_TOTALS})
     localStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
 

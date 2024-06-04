@@ -10,11 +10,10 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      setMyUser(user)
-    }else{
-      
+      setMyUser(user);
+    } else {
+      setMyUser(false);
     }
- 
   }, [isAuthenticated]);
 
   return (

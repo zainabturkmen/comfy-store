@@ -14,13 +14,13 @@ const AuthWrapper = ({ children }) => {
   }
 
   if (error) {
-      return (
-        <Wrapper>
-          <h1>{error.message}</h1>
-        </Wrapper>
-      );
+    return (
+      <Wrapper>
+        <h1>{error.message}</h1>
+      </Wrapper>
+    );
   }
-  return <h4>AuthWrapper Component</h4>;
+  return <>{children}</>;
 };
 
 const Wrapper = styled.section`

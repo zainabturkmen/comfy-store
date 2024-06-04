@@ -18,11 +18,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Auth0Provider
-    domain="{yourDomain}"
-    clientId="{yourClientId}"
+    domain="dev-xocw6fw7c4ppcsm8.us.auth0.com"
+    clientId="BiWKut1hQqfwIZR6tXbW3htO0XjxUrR4"
     authorizationParams={{
       redirect_uri: window.location.origin,
     }}
+    cacheLocation="localstorage"
   >
     <ProductsProvider>
       <FilterProvider>
@@ -31,5 +32,5 @@ root.render(
         </CartProvider>
       </FilterProvider>
     </ProductsProvider>
-  </Auth0Provider>,
+  </Auth0Provider>
 );

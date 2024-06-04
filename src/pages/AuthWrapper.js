@@ -4,6 +4,11 @@ import styled from "styled-components";
 
 const AuthWrapper = ({ children }) => {
   const { isLoading, error } = useAuth0();
+
+
+  if (isLoading) {
+    return 
+  }
   return <h4>AuthWrapper Component</h4>;
 };
 

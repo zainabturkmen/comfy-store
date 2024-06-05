@@ -47,7 +47,35 @@ const CheckoutForm = () => {
     },
   };
 
-  return <h4>hello from Stripe Checkout </h4>;
+  const createPaymentIntent = async () => {
+    console.log("hello heheheh");
+  };
+
+  useEffect(() => {
+    createPaymentIntent();
+    // eslint -disable-next-line
+  }, []);
+
+  const handleChange = async (event) => {};
+  const handleSubmit = async (ev) => {};
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit} id="payment-form">
+        <CardElement
+          id="card-element"
+          options={cardStyle}
+          onChange={handleChange}
+        />
+        <button disabled={processing || disabled || succeeded} id="submit">
+          <span id="button-text">
+            {processing ? <div className="spinner" id="spinner"></div> : "Pay"}
+          </span>
+        </button>
+        {/* show any error that happens when processing the payment */}
+      </form>
+    </div>
+  );
 };
 
 const StripeCheckout = () => {

@@ -73,6 +73,13 @@ const CheckoutForm = () => {
           </span>
         </button>
         {/* show any error that happens when processing the payment */}
+        {error && (
+          <div className="card-error" role="alert">
+            {" "}
+            {error}
+          </div>
+        )}
+        {/* show a success message uopn completion */}
       </form>
     </div>
   );

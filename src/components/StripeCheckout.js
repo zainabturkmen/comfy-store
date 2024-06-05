@@ -16,7 +16,7 @@ import { useHistory } from "react-router-dom";
 const promise = loadStripe(process.env.REACT_APP_AUTH_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = () => {
-  const { cart, total_amount, shipping_fee } = useCartContext();
+  const { cart, total_amount, shipping_fee, clearCart } = useCartContext();
   const { myUser } = useUserContext();
   const history = useHistory();
   // STRIPE STUFF
@@ -70,6 +70,25 @@ const CheckoutForm = () => {
   };
   const handleSubmit = async (ev) => {
     ev.preventDefault();
+    setProcessing(true);
+
+    const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+      },
+    });
+    if (payload.error) {
+      setError(`Payment failed ${payload.error.message}`);
+      setProcessing(false);
+    } else {
+      setError(null);
+      setProcessing(false);
+      setSucceeded(true);
+      setTimeout(() => {
+        clearCart();
+        history.push("/");
+      }, 10000);
+    }
   };
 
   return (

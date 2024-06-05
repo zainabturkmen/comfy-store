@@ -53,10 +53,9 @@ const CheckoutForm = () => {
         "/.netlify/functions/create-payment-intent",
         JSON.stringify({ cart, shipping_fee, total_amount })
       );
-      console.log(data.clientSecret);
       setClientSecret(data.clientSecret);
     } catch (error) {
-      console.log(error.response);
+      // console.log(error.response);
     }
   };
 
@@ -70,6 +69,19 @@ const CheckoutForm = () => {
 
   return (
     <div>
+      {succeeded ? (
+        <article>
+          <h4>Thank you </h4>
+          <h4>your payment was seccessful!</h4>
+          <h4>Redirecting to home page shortly</h4>
+        </article>
+      ) : (
+        <article>
+          <h4>Hello, {myUser && myUser.name}</h4>
+          <p>Your total is {formatPrice(shipping_fee + total_amount)}</p>
+          <p>Test card number : 4242 4242 4242 4242</p>
+        </article>
+      )}
       <form onSubmit={handleSubmit} id="payment-form">
         <CardElement
           id="card-element"

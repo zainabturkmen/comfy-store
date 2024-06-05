@@ -64,7 +64,10 @@ const CheckoutForm = () => {
     // eslint -disable-next-line
   }, []);
 
-  const handleChange = async (event) => {};
+  const handleChange = async (event) => {
+    setDisabled(event.empty);
+    setError(event.error ? event.error.message : "");
+  };
   const handleSubmit = async (ev) => {};
 
   return (

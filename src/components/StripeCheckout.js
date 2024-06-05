@@ -16,6 +16,7 @@ import { useHistory } from "react-router-dom";
 const promise = loadStripe(process.env.REACT_APP_AUTH_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = () => {
+  const { cart, total_amount, shipping_fee } = useCartContext();
   const cardStyle = {
     style: {
       base: {

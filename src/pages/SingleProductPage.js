@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { single_product_url as url } from "../utils/constants";
 import { formatPrice } from "../utils/helpers";
@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const SingleProductPage = () => {
   const { id } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
   const {
     single_product_loading: loading,
     single_product_error: error,
@@ -32,7 +32,7 @@ const SingleProductPage = () => {
     console.log(error);
     if (error) {
       setTimeout(() => {
-        history.push("/");
+        navigate("/");
       }, 3000);
     }
   }, [error]);
@@ -57,37 +57,39 @@ const SingleProductPage = () => {
   } = product;
   console.log(product);
 
-  return <Wrapper>
-    <PageHero title={name}  product/>
-    <div className="section section-center page">
-      <Link to="/products" className="btn">
-        back to home 
-      </Link>
-      <div className="product-center">
-        <ProductImages images={images}/>
-        <section className="content">
-          <h2>{name}</h2>
-          <Stars stars= {stars} reviews={reviews}/>
-          <h5 className="price">{formatPrice(price)}</h5>
-          <p className="desc">{description}</p>
-          <p className="info">
-            <span>Availabel : </span>
-            {stock > 0 ? "In stock" : "out of stock"}
-          </p>
-          <p className="info">
-            <span>SKU : </span>
-            {sku}
-          </p>
-          <p className="info">
-            <span> Brand: </span>
-            {company}
-          </p>
-          <hr/>
-          {stock > 0 && <AddToCart  product={product}/>}
-        </section>
+  return (
+    <Wrapper>
+      <PageHero title={name} product />
+      <div className="section section-center page">
+        <Link to="/products" className="btn">
+          back to home
+        </Link>
+        <div className="product-center">
+          <ProductImages images={images} />
+          <section className="content">
+            <h2>{name}</h2>
+            <Stars stars={stars} reviews={reviews} />
+            <h5 className="price">{formatPrice(price)}</h5>
+            <p className="desc">{description}</p>
+            <p className="info">
+              <span>Availabel : </span>
+              {stock > 0 ? "In stock" : "out of stock"}
+            </p>
+            <p className="info">
+              <span>SKU : </span>
+              {sku}
+            </p>
+            <p className="info">
+              <span> Brand: </span>
+              {company}
+            </p>
+            <hr />
+            {stock > 0 && <AddToCart product={product} />}
+          </section>
+        </div>
       </div>
-    </div>
-  </Wrapper>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.main`

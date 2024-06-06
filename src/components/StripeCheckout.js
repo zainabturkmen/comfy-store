@@ -11,14 +11,14 @@ import axios from "axios";
 import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
 import { formatPrice } from "../utils/helpers";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const promise = loadStripe(process.env.REACT_APP_AUTH_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = () => {
   const { cart, total_amount, shipping_fee, clearCart } = useCartContext();
   const { myUser } = useUserContext();
-  const navigate = useNavigate();
+  const history = useHistory();
   // STRIPE STUFF
 
   const [succeeded, setSucceeded] = useState(false);
@@ -28,23 +28,6 @@ const CheckoutForm = () => {
   const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
   const elements = useElements();
-
-  const createPaymentIntent = async () => {
-    try {
-      const { data } = await axios.post(
-        "/.netlify/functions/create-payment-intent",
-        JSON.stringify({ cart, shipping_fee, total_amount })
-      );
-      setClientSecret(data.clientSecret);
-    } catch (error) {
-      // console.log(error.response);
-    }
-  };
-
-  useEffect(() => {
-    createPaymentIntent();
-    // eslint -disable-next-line
-  }, []);
 
   const cardStyle = {
     style: {
@@ -63,6 +46,23 @@ const CheckoutForm = () => {
       },
     },
   };
+
+  const createPaymentIntent = async () => {
+    try {
+      const { data } = await axios.post(
+        "/.netlify/functions/create-payment-intent",
+        JSON.stringify({ cart, shipping_fee, total_amount })
+      );
+      setClientSecret(data.clientSecret);
+    } catch (error) {
+      // console.log(error.response);
+    }
+  };
+
+  useEffect(() => {
+    createPaymentIntent();
+    // eslint -disable-next-line
+  }, []);
 
   const handleChange = async (event) => {
     setDisabled(event.empty);
@@ -86,7 +86,7 @@ const CheckoutForm = () => {
       setSucceeded(true);
       setTimeout(() => {
         clearCart();
-        navigate("/");
+        history.push("/");
       }, 1000);
     }
   };

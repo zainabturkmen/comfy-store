@@ -1,2 +1,7 @@
 [build]
 functions = "functions"
+
+  command = "pnpm run build"
+  environment = { REACT_APP_AUTH_CLIENT_ID = "...", REACT_APP_AUTH_DOMAIN = "...", REACT_APP_AUTH_STRIPE_PUBLIC_KEY = "...", REACT_APP_AUTH_STRIPE_SECRET_KEY = "..." }
+  package-manager-strict = false
+  publish = "/opt/build/repo/build"

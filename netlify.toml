@@ -1,6 +1,7 @@
 [build]
 functions = "functions"
 
+
 command = "pnpm run build"  
 
    

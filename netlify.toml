@@ -2,7 +2,7 @@
 functions = "functions"
 
 
-command = "pnpm run build"     
+command = "pnpm run build"       
    
    
      

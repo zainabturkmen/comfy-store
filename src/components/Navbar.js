@@ -78,6 +78,9 @@ const NavContainer = styled.nav`
   .cart-btn-wrapper {
     display: none;
   }
+  .show-nav {
+    display: block;
+  }
   @media (min-width: 992px) {
     .nav-toggle {
       display: none;
